@@ -18,7 +18,7 @@ Trade Page
 <br>
 All Trade
 <br>
-![Alt Text](./media/AllTtades.png)
+![Alt Text](./media/AllTrades.png)
 <br>
 ![Alt Text](./media/TradeInfo.png)
 <br>
