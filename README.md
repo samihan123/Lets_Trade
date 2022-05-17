@@ -16,6 +16,10 @@ Below are few ScreenShots of the Webapp:
 <br>
 Trade Page
 <br>
+All Trade
+<br>
+![Alt Text](./media/AllTtades.png)
+<br>
 ![Alt Text](./media/TradeInfo.png)
 <br>
 Sign In page:
@@ -25,7 +29,11 @@ Sign In page:
 Sign Up Page:
 <br>
 ![Alt Text](./media/Signup.png)
-
+<br>
+Create Trade
+<br>
+![Alt Text](./media/CreateTrade.png)
+<br>
 
 ## Tech/framework used
 
