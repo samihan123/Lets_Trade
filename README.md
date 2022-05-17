@@ -11,6 +11,10 @@ item and user json files are provided, you can integrate/upload that in your mon
 
 You view the screenShots of WebApp in ./media folder
 
+Demo
+
+https://user-images.githubusercontent.com/22686539/168919409-9389d86c-b31c-49c8-bf88-0ecc27b3b94e.mp4
+
 Below are few ScreenShots of the Webapp:
 ![Alt Text](./media/Profile.png)
 <br>
