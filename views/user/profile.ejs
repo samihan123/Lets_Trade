@@ -1,0 +1,124 @@
+<%- include('../partials/header.ejs',{cssurl:'/css/common.css'}) %>
+<div class = "profileContent">
+    <h2>Welcome, <%=user.firstName%></h2> 
+    <br>  
+    <% if(trades.length){ %>
+        <p> You have created following Trades</p>
+        <br>
+        <div class="itemContents">
+        <table>
+            <tr>
+                <th>Item Name</th>
+                <th>item category</th>
+                <th>Status</th>
+                <th>    </th>
+            </tr>
+        <% trades.forEach(trade => { %>
+            <tr>
+                <td><a href="/trade/<%= trade._id %>"><%= trade.item_name %></a></td>
+                <td><%= trade.item_category %></td>
+                <td><%= trade.status %></td>
+                <td>
+                    <form>
+                    <button type="submit" class="trade-btn" formmethod="GET" formaction="/trade/<%= trade._id%>/edit"><span>
+                            Edit</span></button>
+                  
+                    <button type="submit" class="trade-btn" formmethod="POST" formaction="/trade/<%=trade._id%>?_method=DELETE">
+                        <span>Delete</span></button>
+                    <% if(trade.status.trim() == 'Lock-For-Offer'){ %>
+                    <button type="submit" class="trade-btn" formmethod="POST" formaction="/trade/<%= trade._id%>/managetrade">
+                            <span>Manage offer</span></button>
+                    <% } %>
+                    </form>
+                </td>
+
+            </tr>
+
+            
+           
+                    
+        <% }); %>
+        </table>
+        </div>
+    <%}else{ %>
+        <p> You have not created any trade</p>
+    <% }%>
+    
+    </div>
+<div class="watchItems">
+    <h3>Watch List</h3>
+    <% if(watchItems.length){ %>
+        <p>Following are the items you are watching.</p>
+        <div class="itemContents">
+            <table>
+                <tr>
+                    <th>Item Name</th>
+                    <th>item category</th>
+                    <th>Status</th>
+                    <th>    </th>
+                </tr>
+                <% watchItems.forEach(trade => { %>
+                <tr>
+                    <td><a href="/trade/<%= trade._id %>"><%= trade.item_name %></a></td>
+                    <td><%= trade.item_category %></td>
+                    <td><%= trade.status %></td>
+                    <td>
+                        <form>
+                        <button type="submit" class="trade-btn" formmethod="POST" formaction="/trade/<%= trade._id%>/giveoffer"><span>
+                                Trade</span></button>
+                      
+                        <button type="submit" class="trade-btn" formmethod="POST" formaction="/users/<%= trade._id%>/unwatch"><span>
+                                    UnWatch</span></button>
+                        </form>
+                    </td>
+                </tr>
+                <% }); %>
+            </table>
+        </div>
+
+    <%}else{ %>
+        <p>You don't have any item in watch list</p>
+       
+    <% } %>
+    <div class="offerItems">
+        <h3>Offer Items</h3> 
+        <!-- //offer items --> 
+        <% if( offerList.length){ %>
+            <p>Following are the items you have given offers for.</p>
+            <div class="itemContents">
+                <table>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>item category</th>
+                        <th>Status</th>
+                        <th>    </th>
+                    </tr>
+
+                    <% offerList.forEach(trade => { %>
+                        <tr>
+                            <td><a href="/trade/<%= trade._id %>"><%= trade.item_name %></a></td>
+                            <td><%= trade.item_category %></td>
+                            <td><%= trade.status %></td>
+                            <td>
+                                <form>
+                                <button type="submit" class="trade-btn" formmethod="POST" formaction="/trade/<%= trade._id%>/canceloffer"><span>
+                                        Cancel Offer</span></button>
+                              
+                                </form>
+                            </td>
+                        </tr>
+                        <% }); %>
+
+                </table>
+            </div>
+
+        <%}else{ %>
+            <p>You don't have any item in offer list</p>
+        <% } %>
+        
+          
+    </div>
+
+</div>
+
+    <%- include('../partials/footer.ejs')%>

@@ -1,0 +1,121 @@
+<%- include('../partials/header.ejs',{cssurl:'/css/trade.css'}) %>
+    <main>
+        <aside class="prod-info">
+            <div class="product">
+                <div class="prod-desc-img">
+                    <div class="prod-img">
+                        <img alt="coin4" src="<%= item.image %>">
+                    </div>
+                    <div class="prod-desc">
+                        <h3> <%=item.item_name%> </h3>
+                        <div class="prod-info">
+                            <p><%=item.details%></p>
+
+                        </div>
+                        <div class="trade-button">
+                            <form>
+                            <% if(user != item.trader._id){ %>
+                            <button type="submit" class="trade-btn" formmethod="POST" formaction="/trade/<%= item._id%>/giveoffer"><span>
+                                    Trade</span></button>
+                            <button type="submit" class="trade-btn" formmethod="POST" formaction="/users/<%= item._id%>/watch"><span>
+                                        Watch</span></button>
+                            <% } %>
+                            <% if(user == item.trader._id){ %>
+                            
+                            <button type="submit" class="trade-btn" formmethod="GET" formaction="/trade/<%= item._id%>/edit"><span>
+                                    Edit</span></button>
+                          
+                            <button type="submit" class="trade-btn" formmethod="POST" formaction="/trade/<%=item._id%>?_method=DELETE">
+                                <span>Delete</span></button>
+                            
+                            <%  } %> 
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-details">
+                <div class="product-info">
+                    <div>
+                        <b>Product Name:</b>
+                        <p> <%=item.item_name%></p>
+                    </div>
+                    <div>
+                        <b>Category:</b>
+                        <p> <%=item.item_category%></p>
+                    </div>
+                    <div>
+                        <b>Manufatured Year:</b>
+                        <p><%=item.manufactured_year%></p>
+                    </div>
+                    <div>
+                        <b>Origin-Country:</b>
+                        <p> <%=item.origin_country%></p>
+                    </div>
+                    <div>
+                        <b>Items willing to trade:</b>
+                        <p> <%=item.item_to_trade%></p>
+                    </div>
+                    <div>
+                        <b>Trader:</b>
+                        <p> <%=item.trader.firstName%> <%=item.trader.lastName%></p>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </aside>
+        <aside class="similar-prod">
+            <div class="similar-items">
+                <div class="section-heading">
+                    Similar Items
+                </div>
+                <a href="/trade/trades">
+                    <div class="sim-product">
+                        <div class="s-prod-img">
+                            <img alt="coin1 " src="/images/Coins/coin1.jpeg">
+                        </div>
+                        <div>
+                            <h4>Coin 1</h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="/trade/trades">
+                    <div class="sim-product">
+                        <div class="s-prod-img">
+                            <img alt="coin2" src="/images/Coins/coin2.jpeg">
+                        </div>
+                        <div>
+                            <h4>Coin 2</h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="/trade/trades">
+                    <div class="sim-product">
+                        <div class="s-prod-img">
+                            <img alt="coin3" src="/images/Coins/coin3.jpeg">
+                        </div>
+                        <div>
+                            <h4>Coin 3</h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="/trade/trades">
+                    <div class="sim-product">
+                        <div class="s-prod-img">
+                            <img alt="coin4" src="/images/Coins/coin4.jpeg">
+                        </div>
+                        <div>
+                            <h4>Coin 4</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </aside>
+
+    </main>
+
+ 
+    <%- include('../partials/footer.ejs') %>   

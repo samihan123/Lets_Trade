@@ -1,0 +1,12 @@
+<%- include('./partials/header.ejs',{cssurl:'/css/common.css'}) %>
+<main>
+    <div class="main">
+        <h1>
+            <%= error.status%> Error
+        </h1>
+        <h3>
+            <%= error.message%>
+        </h3>
+    </div>
+</main>
+<%- include('./partials/footer.ejs') %>   

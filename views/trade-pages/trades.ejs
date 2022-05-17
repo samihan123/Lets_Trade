@@ -1,0 +1,40 @@
+<%- include('../partials/header.ejs',{cssurl:'/css/trades.css'}) %>
+
+    <main>
+        
+   
+        <div class="main-trades">
+            <% if(Object.keys(category_dict).length) { %>
+                <% for (const [key, value] of Object.entries(category_dict)) { %>
+                    <div class="<%=key %>css">
+                        <div class="section-title">
+                            <h3> <%=key %> </h3>
+                        </div>
+                        <div class="row row-cols-1 row-cols-md-5 g-5">
+                    <% for(let i=0;i<value.length;i++){ %>
+                        
+                            <a href="/trade/<%= value[i]._id %>">
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="<%= value[i].image %>" class="card-img-top" alt="coin1">
+                                        <div class="card-body">
+                                            <h6 class="card-title"><b><%= value[i].item_name %></b></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                    <% } %>
+                        </div>
+                    </div>
+                <% } %>
+                    
+            <% }else{ %>
+                <h1> No items to display</h1>
+                <% } %>
+
+        </div>
+
+    </main>
+
+    
+    <%- include('../partials/footer.ejs') %>   

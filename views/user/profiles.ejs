@@ -1,0 +1,31 @@
+<%- include('../partials/header.ejs',{cssurl:'/css/common.css'}) %>
+<div class = "profileContent">
+    <h2>Welcome, <%=user.firstName%></h2> 
+    <br>  
+    <% if(trades.length){ %>
+        <p> You have created following Trades</p>
+        <br>
+        <div class="itemContents">
+        <% trades.forEach(trade => { %>
+          <br>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+            <div class="col-4 col-lg-2  ">            
+                <a href="/trade/<%= trade._id %>">
+                                <div class="card h-100">
+                                    <img src="<%= trade.image %>" class="card-img-top" alt="coin1">
+                                    <div class="card-body">
+                                        <h6 class="card-title"><b><%= trade.item_name %></b></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                </div>
+                    
+        <% }); %>
+        </div>
+    <%}else{ %>
+        <p> You have not created any stories</p>
+    <% }%>
+    
+    </div>
+    <%- include('../partials/footer.ejs')%>

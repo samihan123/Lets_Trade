@@ -1,0 +1,215 @@
+/* making all basic tag margin 0 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin: 0px;
+}
+
+/* setting the whole body */
+body {
+  position: relative;
+  margin: 0px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: white;
+  /*background-color: rgb(223, 226, 232);*/
+
+  background-image: url(/images/grunge-stained-old-paper-texture.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+  
+  
+}
+
+/*disabling scrollbar
+body::-webkit-scrollbar {
+  display: none;
+}*/
+/* this is heading section*/
+.header-info {
+  height: 10%;
+  width: 100%;
+  background-color: rgba(145, 137, 137, 0.5);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.header-info .logo {
+  height: 70%;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  margin: 6px;
+}
+
+.header-info .logo-info {
+  font-size: 1vw;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.header-info .logo-info h4 {
+  font-size: 2vw;
+}
+
+.navigation {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+.header-info .navigation .auth-menus {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.header-info .navigation .nav-menu {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+a:hover {
+  color: burlywood;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1.5vw;
+  color: aliceblue;
+  font-family: cursive;
+  font-weight: bolder;
+  font-size: x-large;
+  background-color: rgba(244, 164, 96, 0.30);
+}
+
+/* This is a footer section*/
+footer {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  bottom: 0%;
+  margin-top: 35px;
+  background-color: rgb(170, 170, 170, 0.8);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+footer .copyright-info {
+  height: auto;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 20px;
+  align-self: center;
+}
+
+footer .social-networks {
+  height: auto;
+  width: auto;
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding-right: 30px;
+}
+
+.success {
+  background: rgba(108, 192, 112, 0.7);
+  color: #fff;
+  width: 70%;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.error {
+  background: rgba(255, 102, 51, 0.7);
+  color: #fff;
+  width: 70%;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.content {
+align-items: center;
+padding: 10px;
+align-content: center;
+}
+
+.loginContent{
+  padding: 20px;
+
+}
+
+.signupcontent {
+  align-items: center;
+padding: 20px;
+}
+
+.profileContent {
+
+  color: white;
+  padding: 20px;
+  font: bold;
+}
+
+.itemContents {
+  color: cadetblue;
+}
+
+.itemContents b{
+  color: cadetblue;
+
+}
+
+table, th, td {
+  border:1px solid black;
+  color: white;
+  size: 50px;
+}
+
+.managetrade {
+  color: white;
+  padding: 20px;
+  font: bold;
+}
+
+.watchItems{
+  color: white;
+  padding: 20px;
+  font: bold;
+}
+
+.offerItems {
+  color: white;
+  padding: 20px;
+  font: bold;
+}

@@ -1,0 +1,364 @@
+/* making all basic tag margin 0 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin: 0px;
+}
+
+/* setting the whole body */
+body {
+  position: relative;
+  margin: 0px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: white;
+  /*background-color: rgb(223, 226, 232);*/
+
+  background-image: url(/images/grunge-stained-old-paper-texture.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/*disabling scrollbar*/
+body::-webkit-scrollbar {
+  display: none;
+}
+/* this is heading section*/
+.header-info {
+  height: 10%;
+  width: 100%;
+  background-color: rgba(145, 137, 137, 0.5);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.header-info .logo {
+  height: 70%;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  margin: 6px;
+}
+
+.header-info .logo-info {
+  font-size: 1vw;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.header-info .logo-info h4 {
+  font-size: 2vw;
+}
+
+.navigation {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+.header-info .navigation .auth-menus {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.header-info .navigation .nav-menu {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+a:hover {
+  color: burlywood;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: antiquewhite;
+
+  margin-bottom: 10px;
+  font-size: 1.5vw;
+}
+/*product info*/
+.prod-info {
+  position: relative;
+  display: inline-block;
+  overflow: scroll;
+  width: 70%;
+  height: auto;
+}
+.prod-info::-webkit-scrollbar {
+  display: none;
+}
+
+.product {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: auto;
+  margin-right: 2%;
+  margin-top: 2%;
+  justify-content: space-around;
+  box-sizing: border-box;
+  border: 2px lightgray;
+  background-color: rgb(139, 104, 91, 0.6);
+}
+
+.product .prod-desc-img {
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  text-align: justify;
+  justify-content: left;
+  flex-direction: row;
+
+  box-sizing: border-box;
+}
+.product .prod-desc-img h3 {
+  margin: 5px;
+}
+
+.prod-desc-img .prod-img {
+  width: 20vw;
+  height: 40vh;
+  margin-left: 1vw;
+  margin-top: 5vh;
+  padding: 5px;
+}
+.prod-desc-img .prod-img > img {
+  height: 150px;
+  width: 150px;
+  padding: 0px 10px;
+}
+.prod-desc-img .prod-desc {
+  width: auto;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: auto;
+  margin-right: 2vw;
+  margin-top: 2vh;
+  justify-content: center;
+  font-size: medium;
+}
+
+.product .prod-desc-img .prod-info {
+  width: auto;
+  padding: 5px;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.prod-desc .trade-button , form{
+  width: 30%;
+  height: 5vh;
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+
+  text-align: end;
+  align-items: center;
+}
+.trade-button .trade-btn {
+  width: auto;
+  height: auto;
+  margin: 10px;
+  background-color: rgb(160, 132, 132);
+  cursor: pointer;
+}
+.trade-btn .span {
+  width: auto;
+  height: auto;
+}
+
+.product-details {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.product-info {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-right: 2%;
+  margin-top: 2%;
+  margin-bottom: 10%;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+.product-info > div {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: rgb(139, 104, 91, 0.6);
+  margin: 4px 0px 4px 0px;
+}
+
+/*aside right*/
+/*aside 2 similar product*/
+
+.similar-prod::-webkit-scrollbar {
+  display: none;
+}
+.similar-prod {
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  width: 29%;
+
+  margin-top: 3vh;
+  margin-right: 2vw;
+  margin-left: 2vw;
+}
+
+.similar-items {
+  height: auto;
+  width: 100%;
+  background-color: rgb(139, 104, 91, 0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+.similar-items .section-heading {
+  margin-top: 10px;
+  position: relative;
+  margin-bottom: 12px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.sim-product {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.s-prod-img > img {
+  height: 50px;
+  width: 50px;
+  padding: 0px 10px;
+}
+
+.s-prod-img h4 {
+  padding: 5px;
+}
+/* This is a footer section*/
+footer {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin-top: 65px;
+  bottom: 0%;
+  background-color: rgb(170, 170, 170, 0.8);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+footer .copyright-info {
+  height: auto;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 20px;
+  align-self: center;
+}
+
+footer .social-networks {
+  height: auto;
+  width: auto;
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding-right: 30px;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  bottom: 0%;
+  margin-top: 25px;
+  background-color: rgb(170, 170, 170, 0.8);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+footer .copyright-info {
+  height: auto;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 20px;
+  align-self: center;
+}
+
+/* this is the footer section*/
+footer .social-networks {
+  height: auto;
+  width: auto;
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding-right: 30px;
+}
+
+.success {
+  background: rgba(108, 192, 112, 0.7);
+  color: #fff;
+  width: 70%;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.error {
+  background: rgba(255, 102, 51, 0.7);
+  color: #fff;
+  width: 70%;
+  text-align: center;
+  padding: 10px 10px;
+}

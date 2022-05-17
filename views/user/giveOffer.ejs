@@ -1,0 +1,43 @@
+<%- include('../partials/header.ejs',{cssurl:'/css/common.css'}) %>
+<div class = "profileContent">
+    <h2>Welcome, <%=user.firstName%></h2> 
+    <br>  
+    <% if(trades.length){ %>
+        <p> What item do you want to trade? </p>
+        <br>
+        <div class="itemContents">
+        <table>
+            <tr>
+                <th>Item Name</th>
+                <th>item category</th>
+                <th>Status</th>
+                <th>    </th>
+            </tr>
+        <% trades.forEach(trade => { %>
+            <tr>
+                <td><a href="/trade/<%= trade._id %>"><%= trade.item_name %></a></td>
+                <td><%= trade.item_category %></td>
+                <td><%= trade.status %></td>
+                <td>
+                    <form>
+                        <input type="hidden" id="totradeId" name="totradeId" value="<%=totradeId%>">
+                        <button type="submit" class="trade-btn" formmethod="POST" formaction="/trade/<%= trade._id%>/tradeOffer"><span>
+                            Trade</span></button>
+                    </form>
+                </td>
+
+            </tr>
+
+            
+           
+                    
+        <% }); %>
+        </table>
+        </div>
+    <%}else{ %>
+        <p> You have not created any trade</p>
+    <% }%>
+    
+
+</div>
+<%- include('../partials/footer.ejs')%>

@@ -1,0 +1,26 @@
+<%- include('../partials/header.ejs',{cssurl:'/css/common.css'}) %>
+<div class="managetrade">
+    <table>
+        <tr>
+            <th> Item requested for trade </th>
+            <th> Item offered for trade</th>
+            <th>    </th>
+        </tr>
+        <tr>
+            <td><a href="/trade/<%= item._id %>"><%= item.item_name%></a></td>
+            <td><a href="/trade/<%= item2._id %>"><%= item2.item_name%></a></td>
+            <td>
+                <form>
+                <button type="submit" class="trade-btn" formmethod="POST" formaction="/trade/<%= item._id%>/accepttrade"><span>
+                    Accept</span></button>
+          
+                <button type="submit" class="trade-btn" formmethod="POST" formaction="/trade/<%= item._id%>/rejecttrade">
+                    <span>Reject</span></button>
+                </form>    
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<%- include('../partials/footer.ejs')%>

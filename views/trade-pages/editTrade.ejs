@@ -1,0 +1,56 @@
+<%- include('../partials/header.ejs',{cssurl:'/css/new_trade.css'}) %>
+    <main>
+        <h2>Add the item, So that you can trade</h2>
+        <p>This item would be visible to other users.</p>
+        <form  method="POST" action="/trade/<%= item._id%>?_method=PUT" class="addItem-form">
+            <div class="category">
+                <label for="prod-cat"> Category of Product</label>
+                <input type="text" name="item_category" id="item_category" value="<%= item.item_category%>" required>
+                <!--
+                <select name="item_category" id="item_category">
+                    <option value="Uncategorised">Uncategorised</option>
+                    <option value="Coins">Coins</option>
+                    <option value="Books">Books</option>
+                    <option value="Stamps">Stamps</option>
+                    <option value="Art">Art</option>
+                    <option value="Automotive">Automotive</option>
+                    <option value="Furniture">Furniture</option>
+                </select>
+                -->
+            </div>
+            <div class="prod-name">
+                <label for="item_name">Product Name</label>
+                <input type="text" name="item_name" id="item_name" value="<%= item.item_name%>" required>
+            </div>
+            <div class="mfg-year">
+                <label for="manufactured_year"> Manufatured Year</label>
+                <input type="number" name="manufactured_year" id="manufactured_year" value="<%= item.manufactured_year%>" required>
+            </div>
+            <div class="country-of-origin">
+                <label for="origin_country"> Origin Country</label>
+                <input type="text" name="origin_country" id="origin_country" value="<%= item.origin_country%>" required>
+
+            </div>
+            <div class="prod-desc">
+                <label for="details"> Description</label>
+                <textarea name="details" id="details" class="details"  rows="5" cols="8"  ><%= item.details%></textarea>
+
+
+            </div>
+            <div class="upload-img">
+                <label for="image">Select image:</label>
+                <input type="text" id="image" name="image" value="<%= item.image%>" >
+            </div>
+            <div class="trade-items">
+                <label for="item_to_trade">Items willing to trade</label>
+                <input type="text" name="item_to_trade" id="item_to_trade" value="<%= item.item_to_trade%>" required>
+            </div>
+            <div class="submit-btn">
+                <input type="submit" class="lt_button" value="edit">
+            </div>
+        </form>
+
+
+    </main>
+   
+    <%- include('../partials/footer.ejs') %>   
