@@ -12,7 +12,19 @@ item and user json files are provided, you can integrate/upload that in your mon
 You view the screenShots of WebApp in ./media folder
 
 Below are few ScreenShots of the Webapp:
-![Alt Text](./media/demo_.gif)
+![Alt Text](./media/Profile.png)
+<br>
+Trade Page
+<br>
+![Alt Text](./media/TradeInfo.png)
+<br>
+Sign In page:
+<br>
+![Alt Text](./media/Signin.png)
+<br>
+Sign Up Page:
+<br>
+![Alt Text](./media/Signup.png)
 
 
 ## Tech/framework used
