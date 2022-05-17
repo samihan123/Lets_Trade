@@ -5,7 +5,7 @@
 
 
 In this project, I have developed a web application called ‘Let’s Trade’. This application would act as a middleware for users to trade any antique or collectible items with other users.User can keep a watch on trade. When user select to watch the trade, that trade is been added in watch list of the user.
-User would be able to trade the item with other user.When item is been traded and then the user deletes traded item, that trade that trade is been deleted from watchlist and trade list.
+User would be able to trade the item with other user.When user click trade, he/she would be asked to select the item from his trade items for the trade. When item is been traded and then the user deletes traded item, that trade is been deleted from watchlist and trade list.
 
 item and user json files are provided, you can integrate/upload that in your mongoDB database.
 
