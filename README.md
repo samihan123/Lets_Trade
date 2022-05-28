@@ -65,7 +65,7 @@ npm start
 
 ## You can reach out 😊😊
 
-Feel free to contact me about the problems. I will try to help as much as I can 😉
+Feel free to contact me about the problems. I will try to help as much as I can 
 
 [![Linkedin Badge](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/samihan-jawalkar-b38457a1/)
 [![Mail Badge](https://img.shields.io/badge/email-c14438?style=for-the-badge&logo=Gmail&logoColor=white&link=mailto:samihan.jawalkar@gmail.com)](mailto:samihan.jawalkar@gmail.com)
